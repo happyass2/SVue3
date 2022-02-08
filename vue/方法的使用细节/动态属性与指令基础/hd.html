@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.20/vue.global.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div id="app">
+        <!-- 点击事件执行add方法 -->
+       <!-- <div v-on:click="add">{{name}}</div> -->
+       <!-- 简写 -->
+       <div @click="add">{{name}}</div>
+        <!-- 动态改变事件属性 -->
+       <div @[event]="add">{{name}}</div>
+       <a href="" @click="go">{{name}}</a>
+        <!-- 阻止默认行为，和上面一样 -->
+       <a href="" @click.prevent="go">{{name}}</a>
+    </div>
+    <script src="hd.js">
+
+    </script>
+</body>
+</html>

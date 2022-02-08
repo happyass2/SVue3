@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.20/vue.global.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app">
+        <!-- 两种基本一致 -->
+        {{name}}
+        <div v-tetx="name"></div>
+        <!-- 默认不解析html语句 -->
+        <!-- 不应该使用v-html -->
+        <!-- 当需要使用html语句时，需要对其进行过滤预防注入攻击 -->
+        <!-- <div v-html="html"></div> -->
+    </div>
+    <script src="hd.js">
+
+    </script>
+</body>
+</html>

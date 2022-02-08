@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.20/vue.global.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 属性需要自己设置，类似帖子的根据id跳转等 -->
+    <!-- 需要为每个帖子动态设置id -->
+    <div id="app">
+       <!-- <div v-bind:id="id">{{name}}</div> -->
+       <!-- 可以简写成下列 -->
+       <!-- 如果属性是none或undefined则值是无效的 -->
+       <!-- <div :id="id">{{name}}</div> -->
+       {{n==1?"后盾人":"向军"}}
+        <!-- 控制显示 -->
+       <div v-show="false"></div>
+        <!-- 只渲染一次 -->
+       <div v-once></div>
+       <!-- 动态改变属性键与值 -->
+       <div v-bind:[arg]="[arg]"></div>
+    </div>
+    <script src="hd.js">
+
+    </script>
+</body>
+</html>
