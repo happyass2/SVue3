@@ -19,7 +19,15 @@
        <div @[event]="add">{{name}}</div>
        <a href="" @click="go">{{name}}</a>
         <!-- 阻止默认行为，和上面一样 -->
-       <a href="" @click.prevent="go">{{name}}</a>
+        <!-- 默认不传参数，但是会传递一个event -->
+       <!-- <a href="htpps://www.baidu.com" @click.prevent="go()">{{name}}</a> -->
+      
+       <!-- 有参数但是还要使用event时 -->
+       <a href="htpps://www.baidu.com" @click="go($event,'xj')">{{name}}</a>
+       
+       {{num}} <button @click ="add2" >增加</button><span style="color: white;background-color:red;">{{error}}</span>
+       
+
     </div>
     <script src="hd.js">
 

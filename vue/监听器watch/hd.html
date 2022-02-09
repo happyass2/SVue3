@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.20/vue.global.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id = app>
+    <!-- 计算computed属性的使用核data内的值使用方法是一样的 -->
+    {{error}}
+    <h2 v-text="error"></h2>
+
+    <button @click ="des" >减少</button>
+       {{num}} 
+    <button @click ="add" >增加</button>
+    <span style="color: white;background-color:red;" v-if="error">{{error}}</span>
+       
+
+    </div>
+    <script src="hd.js">
+
+    </script>
+</body>
+</html>
