@@ -16,6 +16,22 @@
         // 普通的是请求那个返回哪个
 
         // 都可以使用vue
+
+       
+      
+        var isPalindrome = function(x) {
+            x = x+'';
+            console.log(x.len);
+            for(let i = 0;i<x.length/2;i++){
+                console.log(x[i],x[x.length-i-1]);
+                if(x[i] != x[x.length-i]){
+                    
+                    return false;
+                }
+            }
+            return true;
+        };
+        console.log(isPalindrome(121));
     </script>
 </body>
 </html>

@@ -2,37 +2,30 @@ const app = Vue.createApp({
     data() {
         return {
             num:1,
-            tip:''
+            error:'',
+            name:'后盾人'
         }
     },
-    // 计算属性
-    // 计算属性内可以使用响应式数据（数据发生变化时，模板数据也会发生变化，重新渲染）
-    // 有一个缓存的特性
-    // 对比与传统方法形式，每次执行都会重新渲染，computed方法结果没变的就不会重新渲染
-    // 性能更好
-    computed:{
-        // error(){
-        //     return this.num==0?'不能小于0': this.num==10?'不能超过10':'';
-        // }
-        error:{
-            get(){
-                const message = this.num==0?'不能小于0': this.num==10?'不能超过10':'';
-                if(message) return this.tip+message;
-            },
-            set(tip){
-                this.tip = tip;
-            }
+    // watch监听属性选项
+    watch:{
+        // 监听num的值
+        num(newValue,oldValue){
+
+            console.log(newValue,oldValue);
+            this.error = newValue==0?'不能小于0':newValue==10?'不能超过10':'';
         }
-    },
+    },  
     methods: {
        
         add(event){
-            this.error = "提示：";
+            // this.error = '';
             if(this.num<10) this.num++;
+            // else this.error="不能超过10";
         },
         des(event){
-            this.error = "警告：";
+            // this.error = '';
             if(this.num>0) this.num--;
+            // else this.error="不能小于0";
         }
     },
 })
