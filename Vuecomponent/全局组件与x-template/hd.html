@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.20/vue.global.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- html在工作时会把标签变成小写 -->
+    <div id="app">
+
+    </div>
+    <!-- 可以把模板放到这里 -->
+    <script type="text/x-template" id="hdTemplate">
+        <h2>后盾人</h2>
+    </script>
+    <script>
+        // 慎重使用全局组件,全局组件影响性能
+        // 下面都是全局组件
+        const app = Vue.createApp({
+            template:`<div>根组件 - <hdxj /></div>`,
+        });
+        // 调用组件标签就可以调用组件
+        // 组件间没有顺序,可以相互调用
+        app.component('hd',{
+            template:`#hdTemplate`
+        })
+
+        app.component('hdxj',{
+            template:`<div>相聚 -<hd /></div>`
+        })
+        app.mount('#app');
+    </script>
+</body>
+</html>

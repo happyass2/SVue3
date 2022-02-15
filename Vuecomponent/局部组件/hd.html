@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.20/vue.global.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- html在工作时会把标签变成小写 -->
+    <div id="app">
+       
+    </div>
+   
+    <script>
+        // 局部组件
+        // 局部组件的数据是私有的
+        // 不能与根组件相互访问数据
+        // 局部组件是被别的组件使用的
+        const todo = {
+            data() {
+                return {
+                    title:'houdunren'
+                }
+            },
+            template:`<div>{{title}}</div>`
+        }
+       const app = Vue.createApp({
+        //    声明局部组件
+            components:{xj:todo},
+            template:`<div><xj /></div>`
+       });
+       app.mount('#app');
+    </script>
+</body>
+</html>

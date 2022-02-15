@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.20/vue.global.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="app">
+       <!-- {{title}}- <todo /> -->
+
+       <div v-for="l in db":key="l.id">
+        {{l.title}}
+       </div>
+
+       <div v-for="l in db":key="l.id">
+           <!-- 向子组件传递数据 -->
+            <todo :data="l" />
+       </div>
+
+    </div>
+   
+    <script type="module">
+        import App from './main.js';
+    </script>
+</body>
+</html>
